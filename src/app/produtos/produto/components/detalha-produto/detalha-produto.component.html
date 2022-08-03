@@ -1,0 +1,17 @@
+<h2>Detalhamento de Produto</h2>
+<h3>Produto: {{ produto?.nomeProduto }}</h3>
+<h3>Valor Atual:  {{ produto?.valorAtual  | currency: 'BRL': 'symbol'}}</h3>
+
+<h3 class="title">Historico de Alterações</h3>
+<table class="table table-striped">
+    <tr>
+        <th>Data da Alteração</th>
+        <th>Valor</th>
+    </tr>
+    <tr *ngFor="let p of produto?.historicoPreco">
+        <td>{{ p?.dataAlteracao | date : 'dd/MM/yyyy hh:mm'}}</td>
+        <td>{{ p?.valor | currency: 'BRL': 'symbol'}}</td>
+    </tr>
+</table>
+
+<button class="btn btn-primary" [routerLink]="['/lista-produtos']">Voltar</button>

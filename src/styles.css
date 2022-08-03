@@ -13,12 +13,12 @@ body {
 }
 
 .container {
-  display: flex;
+  display: grid;
   flex-direction: row;
 }
 
 router-outlet + *  {
-  padding: 0 16px;
+  padding: 0 5px;
 }
 
 /* Text */
@@ -143,3 +143,5 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

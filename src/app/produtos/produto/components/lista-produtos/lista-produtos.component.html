@@ -1,0 +1,19 @@
+<h3 class="title">Lista de Produtos</h3>
+<table class="table table-striped">
+    <tr>
+        <th>Nome do Produto</th>
+        <th>Valor</th>
+        <th>Editar</th>
+        <th>Inativar</th>
+        <th>Detalha</th>
+    </tr>
+    <tr  *ngFor="let produto of produtos">
+        <td>{{ produto?.nomeProduto }}</td>
+        <td>{{ produto?.valorAtual | currency : 'BRL' : true}}</td>
+        <td><button class="btn btn-primary">Editar</button></td>
+        <td><button class="btn btn-danger">Detalhar</button></td>
+        <td>
+            <a routerLink="{{ '/detalha-produto/' + produto.idProduto }}">Detalhar </a>
+        </td>
+    </tr>
+</table>

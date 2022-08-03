@@ -1,0 +1,27 @@
+<div>
+    <h2 class="title">Lista de Pessoas Juridicas</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Data Abertura </th>
+                <th>Nome Fantasia</th>
+                <th>Nome Empresarial </th>
+                <th>Cnpj </th>
+            </tr>
+        </thead>
+        <tr *ngIf="!pessoasJuridicas?.length">
+            <h3>Nenhum registro encontrado </h3>
+        </tr>
+        <tr *ngFor="let p of pessoasJuridicas">
+            <td>{{p.dataAbertura | date:'dd/MM/yyyy' }}</td>
+            <td>{{p.nomeFantasia}}</td>
+            <td>{{p.nomeEmpresarial}}</td>
+            <td>{{p.cnpj | cnpj }}</td>
+        </tr>
+    </table>
+</div>
+<div>
+    <button class="primary-button" [routerLink]="['/cadastra-pj']">
+        Cadastrar Pessoa Juridica
+    </button>
+</div>

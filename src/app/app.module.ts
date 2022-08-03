@@ -4,31 +4,43 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { TopBarComponent } from './home/top-bar/top-bar.component';
+import { ConteudoComponent } from './home/conteudo/conteudo.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CadastroModule } from './cadastro/cadastro.module';
+import { HomeModule } from './home/home.module';
+import { HomeRoutingModule } from './home/home-routing.module';
+import { CadastroRoutingModule } from './cadastro/cadastro-routing.module';
+import { PessoaModule } from './cadastro/pessoa/pessoa.module';
+import { PessoaRoutingModule } from './cadastro/pessoa/pessoa-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CNPJPipe } from './shared/pipes/cnpj.pipe';
+import { SharedModule } from './shared/shared.module';
+import { ListaProdutosComponent } from './produtos/produto/components/lista-produtos/lista-produtos.component';
+import { ProdutosModule } from './produtos/produtos.module';
+import { ProdutosRoutingModule } from './produtos/produtos-routing.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-    ])
+    HomeModule,
+    HomeRoutingModule,
+    CadastroModule,
+    CadastroRoutingModule,
+    PessoaModule,
+    PessoaRoutingModule,
+    ProdutosModule,
+    ProdutosRoutingModule,
+    SharedModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   declarations: [
-    AppComponent,
-    TopBarComponent,
-    ProductListComponent
+    AppComponent
   ],
   bootstrap: [
     AppComponent
   ]
 })
 export class AppModule { }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
