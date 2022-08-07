@@ -1,0 +1,23 @@
+<h2 class="titulo">Alterar Nome de Categorias</h2>
+
+<h3>Nome atual da Categoria {{ categoria?.nomeCategoria }}</h3>
+<form [formGroup]="form" fxLayoutAlign="space-between center" novalidate>
+    <div>
+        <mat-form-field  [style.width.%]="100" appearence="fill">
+          <mat-label>Novo Nome</mat-label>
+          <input  matInput placeholder="Nome Categoria"
+              formControlName="nomeCategoria">
+        </mat-form-field>
+        <mat-list>
+            <mat-list-item fxLayoutAlign="space-between center">
+                <button mat-raised-button color="primary"
+                    [disabled]="form.invalid" (click)="alterarCategoria()">
+                    Cadastrar
+                </button>
+                &nbsp;
+                <a mat-raised-button routerLink="/lista-categorias">Voltar</a>
+              </mat-list-item>
+        </mat-list>
+      
+    </div>  
+  </form>

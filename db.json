@@ -1,0 +1,24 @@
+{
+    "produtos" : [
+        {
+            "id": 2,
+            "nomeProduto": "Guarana Lata",
+            "valorAtual": 4.13
+        },
+        {
+            "id": 3,
+            "nomeProduto": "Coca Lata",
+            "valorAtual": 5.99
+        },
+        {
+            "id": 4,
+            "nomeProduto": "Fanta Lata",
+            "valorAtual": 7.11
+        },
+        {
+            "id": 5,
+            "nomeProduto": "Fanta Uva",
+            "valorAtual": 1.90
+        }
+    ] 
+}

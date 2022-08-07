@@ -1,0 +1,26 @@
+<h3>Lista de Categorias</h3>
+
+<table class="table table-striped">
+    <tr>
+        <td>Código da Categoria</td>
+        <td>Nome da Categoria</td>
+        <td>Editar</td>
+    </tr>
+    <tr *ngFor="let cat of categorias">
+        <th>{{ cat.idCategoria }}</th>
+        <th>{{ cat.nomeCategoria }}</th>
+        <td>
+            <a routerLink="{{ '/edita-categoria/' + cat.idCategoria }}">Editar </a>
+        </td>
+    </tr>
+
+</table>
+<div>
+    <button class="primary-button" [routerLink]="['/cadastra-categoria']">
+        Cadastrar Categoria
+    </button>
+
+    <button class="primary-button" [routerLink]="['/']">
+        Pagina Inicial
+    </button>
+</div>

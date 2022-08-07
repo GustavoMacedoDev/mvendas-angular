@@ -1,0 +1,16 @@
+<h3>Lista de Pedidos</h3>
+
+<table class="table table-striped">
+    <tr>
+        <th>Id do Pedido</th>
+        <th>Data do Pedido</th>
+        <th>Detalhar</th>
+    </tr>
+    <tr *ngFor="let p of listaPedidos">
+        <td>{{ p.idPedido }}</td>
+        <td>{{ p.dataPedido | date : 'dd/MM/yyy hh:mm' }}</td>
+        <td>
+            <a routerLink="{{ '/detalha-pedido/' + p.idPedido }}">Detalhar </a>
+        </td>
+    </tr>
+</table>

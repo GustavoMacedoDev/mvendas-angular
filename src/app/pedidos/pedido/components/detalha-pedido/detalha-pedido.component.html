@@ -1,0 +1,22 @@
+<h3>
+    <strong>
+    Pedido {{ pedido.idPedido }} 
+    Data do Pedido {{ pedido.dataPedido | date : 'dd/MM/yyyy'}}
+    </strong>
+</h3>
+<h3>Dados do Pedido</h3>
+
+<table class="table table-striped">
+    <tr>
+        <th>Produto</th>
+        <th>Valor do Produto</th>
+        <th>Quantidade</th>
+        <th>Desconto</th>
+    </tr>
+    <tr *ngFor="let p of pedido.itens">
+        <td>{{ p.produto.nomeProduto }}</td>
+        <td>{{ p.produto.valorAtual | currency: 'BRL' }}</td>
+        <td>{{ p.quantidade }}</td>
+        <td>{{ p.desconto | currency: 'BRL' }}</td>
+    </tr>
+</table>

@@ -19,6 +19,10 @@ import { SharedModule } from './shared/shared.module';
 import { ListaProdutosComponent } from './produtos/produto/components/lista-produtos/lista-produtos.component';
 import { ProdutosModule } from './produtos/produtos.module';
 import { ProdutosRoutingModule } from './produtos/produtos-routing.module';
+import { PedidoModule } from './pedidos/pedido/pedido.module';
+import { PedidosRoutingModule } from './pedidos/pedidos-routing.module';
+import { CategoriaModule } from './produtos/categoria/categoria.module';
+import { CategoriaRoutingModule } from './produtos/categoria/categoria-routing.module';
 
 @NgModule({
   imports: [
@@ -32,6 +36,10 @@ import { ProdutosRoutingModule } from './produtos/produtos-routing.module';
     PessoaRoutingModule,
     ProdutosModule,
     ProdutosRoutingModule,
+    PedidoModule,
+    PedidosRoutingModule,
+    CategoriaModule,
+    CategoriaRoutingModule,
     SharedModule,
     AppRoutingModule,
     BrowserAnimationsModule

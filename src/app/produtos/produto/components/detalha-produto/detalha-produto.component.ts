@@ -10,7 +10,7 @@ import { ProdutoService } from 'src/app/shared/services/produto.service';
 })
 export class DetalhaProdutoComponent implements OnInit {
 
-  produto: DetalhaProdutoDto | undefined;
+  produto: DetalhaProdutoDto;
 
   constructor(private produtoService: ProdutoService,
               private route: ActivatedRoute) { }

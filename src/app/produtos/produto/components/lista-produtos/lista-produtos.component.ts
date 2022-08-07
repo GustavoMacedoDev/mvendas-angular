@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Data } from '@angular/router';
 import { ListaProdutosDto } from 'src/app/shared/interfaces/ListaProdutos.dto';
 import { ProdutoService } from 'src/app/shared/services/produto.service';
 

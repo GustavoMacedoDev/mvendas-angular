@@ -1,0 +1,20 @@
+<h2 class="titulo">Cadastro de Categorias</h2>
+<form [formGroup]="form" fxLayoutAlign="space-between center" novalidate>
+    <div>
+        <mat-form-field  [style.width.%]="100">
+          <input matInput placeholder="Nome Categoria"
+              formControlName="nomeCategoria">
+        </mat-form-field>
+        <mat-list>
+            <mat-list-item fxLayoutAlign="space-between center">
+                <button mat-raised-button color="primary"
+                    [disabled]="form.invalid" (click)="cadastrarCategoria()">
+                    Cadastrar
+                </button>
+                &nbsp;
+                <a mat-raised-button routerLink="/lista-categorias">Voltar</a>
+              </mat-list-item>
+        </mat-list>
+      
+    </div>  
+  </form>
