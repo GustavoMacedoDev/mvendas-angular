@@ -1,0 +1,36 @@
+<h2 class="titulo">Cadastro de Produto</h2>
+<form [formGroup]="form" fxLayoutAlign="space-between center" novalidate>
+    <div>
+        <mat-form-field  [style.width.%]="100">
+            <mat-label>Nome do Produto</mat-label>
+          <input matInput placeholder="Nome do Produto"
+              formControlName="nomeProduto">
+        </mat-form-field>
+        <mat-form-field  [style.width.%]="100">
+            <input matInput placeholder="Valor do Produto"
+                formControlName="valor" type="number">
+          </mat-form-field>
+          <mat-list-item>
+            <mat-form-field>
+              <mat-label>Categoria</mat-label>
+              <mat-select placeholder="Categorias" formControlName="categorias" multiple>
+                <mat-option   
+                  *ngFor="let categoria of categoriasList" [value]="categoria">
+                  {{ categoria?.nomeCategoria }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-list-item>
+        <mat-list>
+            <mat-list-item fxLayoutAlign="space-between center">
+                <button mat-raised-button color="primary"
+                    [disabled]="form.invalid" (click)="cadastraProduto()">
+                    Cadastrar
+                </button>
+                &nbsp;
+                <a mat-raised-button routerLink="/lista-produtos">Voltar</a>
+              </mat-list-item>
+        </mat-list>
+      
+    </div>  
+  </form>
