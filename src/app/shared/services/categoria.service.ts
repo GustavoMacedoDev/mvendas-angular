@@ -3,12 +3,16 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment as env } from 'src/environments/environment';
 import { CadastraCategoria } from '../interfaces/CadastraCategoria.dto';
+import { CartCategoriaItem } from '../interfaces/CartCategoriaItem.dto';
+import { CategoriaId } from '../interfaces/CategoriaId.dto';
 import { EditaCategoria } from '../interfaces/EditaCategoria.dto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriaService {
+
+  items: CategoriaId[] = [];
 
   private readonly PATH: string = 'categorias/'
   private readonly PATHBUSCACATEGORIAPELOID: string = 'categorias/id/'
@@ -29,6 +33,11 @@ export class CategoriaService {
 
   listaCategoriaPeloId(idCategoria: number): Observable<any> {
     return this.httpClient.get(env.baseUrl + this.PATHBUSCACATEGORIAPELOID + idCategoria);
+  }
+
+  addItem(categoria: CategoriaId) {
+    this.items.push(categoria);
+
   }
 
 

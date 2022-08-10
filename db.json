@@ -1,24 +1,16 @@
 {
-    "produtos" : [
-        {
-            "id": 2,
-            "nomeProduto": "Guarana Lata",
-            "valorAtual": 4.13
+    "categorias" : [
+        {  
+            "idCategoria" : 1,
+            "nomeCategoria": "BEBIDAS"
         },
-        {
-            "id": 3,
-            "nomeProduto": "Coca Lata",
-            "valorAtual": 5.99
+        {  
+            "idCategoria" : 2,
+            "nomeCategoria": "COMIDAS"
         },
-        {
-            "id": 4,
-            "nomeProduto": "Fanta Lata",
-            "valorAtual": 7.11
-        },
-        {
-            "id": 5,
-            "nomeProduto": "Fanta Uva",
-            "valorAtual": 1.90
+        {  
+            "idCategoria" : 3,
+            "nomeCategoria": "DIVERSOS"
         }
-    ] 
+    ]
 }

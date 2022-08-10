@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CadastraProdutoComponent } from "./produto/components/cadastra-produto/cadastra-produto.component";
 import { DetalhaProdutoComponent } from "./produto/components/detalha-produto/detalha-produto.component";
+import { EditaProdutoComponent } from "./produto/components/edita-produto/edita-produto.component";
 import { ListaProdutosComponent } from "./produto/components/lista-produtos/lista-produtos.component";
 
 export const routes :Routes = [
@@ -16,6 +17,9 @@ export const routes :Routes = [
     {
       path: 'cadastra-produto',
       component: CadastraProdutoComponent
+    },{
+      path: 'edita-produto/:idProduto',
+      component: EditaProdutoComponent
     }
 ]
 

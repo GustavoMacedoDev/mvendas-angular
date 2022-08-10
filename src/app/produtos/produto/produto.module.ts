@@ -16,12 +16,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditaProdutoComponent } from './components/edita-produto/edita-produto.component';
 
 @NgModule({
   declarations: [
     DetalhaProdutoComponent,
     ListaProdutosComponent,
-    CadastraProdutoComponent
+    CadastraProdutoComponent,
+    EditaProdutoComponent
   ],
   imports: [
     CommonModule,

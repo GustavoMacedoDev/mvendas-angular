@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { CadastraProduto } from 'src/app/shared/interfaces/CadastraProduto.dto';
@@ -38,18 +38,19 @@ export class CadastraProdutoComponent implements OnInit {
       categorias: this.fb.control('')
     })
   }
+
   cadastraProduto() {
     if(this.form.invalid) {
       return ;
     }
-    console.log(this.form.value);
+
     const produto: CadastraProduto = this.form.value;
-    
+    console.log(produto);
     this.produtoService.cadastraProduto(produto)
       .subscribe({
         next: () => {
           const msg: string = 'Produto Cadastrado com sucesso';
-        //  this.router.navigate(['/lista-produtos']);
+          this.router.navigate(['/lista-produtos']);
           this.snackBar.open(msg, "Sucesso", { duration: 3000});
         },
         error: (erro) => {

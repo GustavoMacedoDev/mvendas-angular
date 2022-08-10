@@ -1,0 +1,28 @@
+<h2 class="titulo">Alterar Produtos</h2>
+
+<h3>Nome atual do Produto {{ produto?.nomeProduto }} Valor {{ produto?.valorAtual | currency: 'BRL'}}</h3>
+<form [formGroup]="form" fxLayoutAlign="space-between center" novalidate>
+    <div>
+        <mat-form-field  [style.width.%]="100" appearence="fill">
+          <mat-label>Novo Nome</mat-label>
+          <input  matInput placeholder="Nome Produto"
+              formControlName="nomeProduto">
+        </mat-form-field>
+        <mat-form-field  [style.width.%]="100" appearence="fill">
+            <mat-label>Novo Valor</mat-label>
+            <input  matInput placeholder="Valor do Produto"
+                formControlName="valor">
+        </mat-form-field>
+            <mat-list>
+            <mat-list-item fxLayoutAlign="space-between center">
+                <button mat-raised-button color="primary"
+                    [disabled]="form.invalid" (click)="alterarProduto()">
+                    Cadastrar
+                </button>
+                &nbsp;
+                <a mat-raised-button routerLink="/lista-produtos">Voltar</a>
+              </mat-list-item>
+        </mat-list>
+      
+    </div>  
+  </form>
